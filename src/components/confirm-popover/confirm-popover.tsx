@@ -9,28 +9,43 @@ type ConfirmPopoverProps = {
 	message?: string;
 };
 
-export function ConfirmPopover({ children, onConfirm, message = "O'chirishni xoxlaysizmi?" }: ConfirmPopoverProps) {
+export function ConfirmPopover({
+	children,
+	onConfirm,
+	message = "O'chirishni xoxlaysizmi?",
+}: ConfirmPopoverProps) {
 	const [open, setOpen] = useState(false);
+
 	return (
 		<Popover open={open} onOpenChange={setOpen}>
 			<PopoverTrigger asChild>{children}</PopoverTrigger>
-			<PopoverContent className="dark:text-white">
-				<p className="text-[13px] font-medium mb-3">{message}</p>
+
+			<PopoverContent className="dark:bg-[#141414] dark:border-[#262626] dark:text-white">
+				<p className="text-[13px] font-medium mb-3">
+					{message}
+				</p>
+
 				<div className="flex items-center justify-end gap-2">
-					<Button className="cursor-pointer" size={"sm"} value={"outline"} onClick={() => setOpen(false)}>
+					<Button
+						className="cursor-pointer dark:text-white dark:border-[#2a2a2a] dark:hover:bg-[#782020]"
+						size="sm"
+						variant="outline"
+						onClick={() => setOpen(false)}
+					>
 						Yo'q
 					</Button>
+
 					<Button
-						size="sm"
-						variant="destructive"
-						className="cursor-pointer"
-						onClick={() => {
-							onConfirm();
-							setOpen(false);
-						}}
-					>
-						Ha
-					</Button>
+	size="sm"
+	variant="destructive"
+	className="cursor-pointer dark:bg-red-600 dark:hover:bg-red-700 dark:text-white"
+	onClick={() => {
+		onConfirm();
+		setOpen(false);
+	}}
+>
+	Ha
+</Button>
 				</div>
 			</PopoverContent>
 		</Popover>

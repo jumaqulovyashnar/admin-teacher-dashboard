@@ -3,7 +3,6 @@ import type { ColumnDef } from "@/components/data-table/data-table";
 import Icon from "@/components/icon/icon";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/ui/card";
 
-// TODO: Replace with real API data
 const stats = [
 	{ label: "Jami O'qituvchilar", value: 248, icon: "mdi:account-group", color: "bg-blue-100", iconColor: "#1d4ed8" },
 	{ label: "Erkak O'qituvchilar", value: 142, icon: "mdi:account-tie", color: "bg-cyan-100", iconColor: "#0e7490" },
@@ -286,6 +285,7 @@ export default function Workbench() {
 					))}
 				</div>
 			</div>
+
 			{/* 5. Yillik Faoliyat */}
 			<div className="flex flex-col gap-3">
 				<span className="text-[14px] font-semibold">Yillik Faoliyat</span>

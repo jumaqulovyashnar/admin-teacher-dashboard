@@ -157,7 +157,7 @@ export default function Faculties() {
 	<form
 		onSubmit={handleSubmit(onSubmit)}
 		className="flex flex-col gap-5 py-2 
-		dark:text-white 
+		dark:text-white
 		dark:[&_svg]:text-gray-400"
 	>
 		<div className="flex flex-col gap-2">

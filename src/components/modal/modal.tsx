@@ -6,7 +6,7 @@ type ModalProps = {
 	onClose: () => void;
 	title: string;
 	children: ReactNode;
-className?: string
+	className?:string;
 };
 
 export function Modal({ open, onClose, title, children }: ModalProps) {

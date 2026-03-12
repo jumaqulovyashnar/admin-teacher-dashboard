@@ -101,7 +101,7 @@ function createColumns(
 							type="button"
 							className="inline-flex items-center gap-1.5 bg-red-50 text-red-600 hover:bg-red-100 text-[12px] font-semibold px-2.5 py-1 rounded-md transition-colors cursor-pointer"
 						>
-							<Trash2 className="size-3" />
+							<Trash2 className="size-3 " />
 							O'chirish
 						</button>
 					</ConfirmPopover>
