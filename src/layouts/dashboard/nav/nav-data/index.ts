@@ -35,7 +35,7 @@ const filterNavData = (permissions: string[]) => {
 				items: filteredItems,
 			};
 		})
-		.filter((group): group is NonNullable<typeof group> => group !== null); // 过滤掉空组
+		.filter((group): group is NonNullable<typeof group> => group !== null);
 };
 
 export const useFilteredNavData = () => {
